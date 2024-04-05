@@ -29,8 +29,8 @@ final class DetailMovieController: UIViewController {
         
         viewModel.fetchMovie()
         
-        detailMovieView.onRedirectButtonTapped = {
-            self.redirectButtonTapped()
+        detailMovieView.onRedirectButtonTapped = { [weak self] in
+            self?.redirectButtonTapped()
         }
         
         if let movie = viewModel.selectedMovie {
